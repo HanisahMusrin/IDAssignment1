@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Page1.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Page 1</title>
+</head>
+
+<body>
+    <!making header>
+    <header class ="header"></header>
+        <nav>
+            <div class="logo">
+                <h4>Ninja Space Monkeys</h4>
+            </div>
+            <img src="Design/note.png" id="icon">
+            <audio src="Music/j.m4a" type="audio/m4a" id="mySong"></audio>
+        </nav>
+    </header>
+
+    <!making album>
+    <div class="album">
+        <button id="trapizium"></button>
+        <h4>LIVE @MARS 91:00 MST!!</h4>
+    </div>
+    
+    <!making band members flexbox>
+    <div class="bandFlexbox">
+        <div class="bandCard">
+            <div class="card__inner1">
+                <div class="card__face card__face--front1">
+                    <img src="Design/Drummer.png" alt="drummer" style="width: 120%; margin-left: 10%;">
+                </div>
+                <div class="card__face card__face--back">
+                    <div class="card__content">
+                        <div class="card__header1">
+                            <img src="Design/Drummer Head.png" t="" class="pp" />
+                            <h2>Sam</h2>
+                        </div>
+                        <div class="card__body">
+                            <h3>Drummer</h3>
+                            <p>Lorem ipsum <strong>dolor</strong> sit amet, consectetur <strong>adipiscing</strong> elit. Sed id erat a magna lobortis dictum. Nunc est arcu, <strong>lacinia</strong> quis sapien placerat, <strong>laoreet</strong> tincidunt nulla.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bandCard">
+            <div class="card__inner2">
+                <div class="card__face card__face--front2">
+                    <img src="Design/Lead singer.png" alt="singer" style="width: 70%">
+                </div>
+                <div class="card__face card__face--back">
+                    <div class="card__content">
+                        <div class="card__header2">
+                            <img src="Design/Lead singer Head.png" alt="" class="pp" />
+                            <h2>Rook</h2>
+                        </div>
+                        <div class="card__body">
+                            <h3>Lead Singer</h3>
+                            <p>Lorem ipsum <strong>dolor</strong> sit amet, consectetur <strong>adipiscing</strong> elit. Sed id erat a magna lobortis dictum. Nunc est arcu, <strong>lacinia</strong> quis sapien placerat, <strong>laoreet</strong> tincidunt nulla.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bandCard">
+            <div class="card__inner3">
+                <div class="card__face card__face--front3">
+                    <img src="Design/Guitarist.png" alt="guitarist" style="width: 100%">
+                </div>
+                <div class="card__face card__face--back">
+                    <div class="card__content">
+                        <div class="card__header3">
+                            <img src="Design/Guitarist Head.png" alt="" class="pp" />
+                            <h2>Gabriel</h2>
+                        </div>
+                        <div class="card__body">
+                            <h3>Guitarist</h3>
+                            <p>Lorem ipsum <strong>dolor</strong> sit amet, consectetur <strong>adipiscing</strong> elit. Sed id erat a magna lobortis dictum. Nunc est arcu, <strong>lacinia</strong> quis sapien placerat, <strong>laoreet</strong> tincidunt nulla.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <! making triangles and about card flexbox>
+    <div class="about">
+        <div class="left-triangle"></div> 
+        <div class="card">
+            <h2>About The Band</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas et sagittis velit, non semper lacus. Aliquam at nibh aliquet, ultricies dolor eu, iaculis est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut elit nec massa vestibulum rhoncus id et purus. Curabitur pharetra, velit accumsan fermentum sodales, massa nisl iaculis diam, quis malesuada risus risus in augue. Phasellus non arcu ex. Nulla blandit quis enim ac finibus. Donec vitae nisl sed massa luctus viverra. Nullam imperdiet elit suscipit mollis facilisis. Nam consectetur nunc id iaculis imperdiet. Nunc dui tellus, volutpat ac aug</p>
+        </div>
+        <div class="right-triangle"></div> 
+    </div>
+
+    <!making youtube video iframe>
+    <section id="ytvideos">
+        <div class="ytvideo">
+            <iframe class="responsive-iframe" src="https://www.youtube.com/embed/6wZLrrtDu2U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>   
+        </div>
+    </section>
+
+    <!making footer>
+    <footer class="footer">
+        <div class="footercontainer">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Band</h4>
+                    <ul>
+                        <li><a href="Page2.html">Buy Our Merch</a></li>
+                        <li><a href="#ytvideos">Latest Gigs</a></li>
+                    </ul>   
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>   
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!making album pop up>
+    <div class="signupform">
+        <div class="close-btn">&times;</div>
+        <form>
+            <h2>Pre-register</h2>
+            <div class="form-element">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter email" required>
+            </div>
+            <div class="form-element">
+                <label for="tel">Phone number</label>
+                <input type="tel" id="tel" pattern="[0-9]{8}" placeholder="Enter 8 digit phone number" required>
+            </div>
+            <div class="form-element">
+                <input type="submit" value="sign up">
+            </div>
+        </form>
+    </div>
+    <script src="Page1.js"></script>
+</body>
+
+</html> 

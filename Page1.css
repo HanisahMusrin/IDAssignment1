@@ -1,0 +1,606 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html
+{
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+/*Making header*/
+nav
+{
+    display: flex;
+    padding: 1%;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
+    width:100%;
+    background-color: #E4E4E4;
+}
+
+nav #icon
+{
+    width: 40px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+nav .logo
+{
+    flex: 1;
+    margin-left: 15px;
+    font-size: 23px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #707070;
+}
+
+/*Making album pop up*/
+
+.album
+{
+    letter-spacing: 2px;
+    margin-left: 24%;
+}
+
+
+.album h4
+{
+    position: absolute;
+    margin-left: 11.5%;
+    margin-top: 2%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    color: #707070;
+    text-shadow: 3px 3px 4px #b4b4b4;
+}
+.album #trapizium
+{
+    position:absolute;
+    width: 730px;
+    height: 50px;
+    background: #FAF071;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transform: perspective(10px) rotateX(1deg);
+    text-transform: none;
+    margin: 50px;
+    box-shadow: 7px 9px 9px #a3a2a2;
+}
+
+/*Making album popup*/
+.signupform
+{
+    position: absolute;
+    top:-150%;
+    left:50%;
+    opacity: 0;
+    transform:translate(-50%,-50%) scale(1.25);
+    width:380px;
+    padding: 20px 30px;
+    background: #ffffff;
+    box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    transition: top 0ms ease-in-out 200ms, 
+    opacity 200ms ease-in-out 0ms,
+    transform 200ms ease-in-out 0ms;
+}
+.signupform.active
+{
+    top:50%;
+    opacity: 1;
+    transform:translate(-50%,-50%) scale(1);
+    transition: top 0ms ease-in-out 0ms, 
+    opacity 200ms ease-in-out 0ms,
+    transform 20ms ease-in-out 0ms;
+}
+.signupform .close-btn
+{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    background:#888;
+    color: #eee;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.signupform form h2
+{
+    text-align: center;
+    color: #222;
+    margin: 10px 0px 20px;
+    font-size: 25px;
+}
+.signupform form .form-element
+{
+    margin: 15px 0px;
+}
+.signupform form .form-element label
+{
+    font-size: 14px;
+    color: #222;
+}
+.signupform form .form-element input[type="email"],
+.signupform form .form-element input[type="tel"]
+{
+    margin-top:5px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+.signupform form .form-element input[type="submit"]
+{
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    background: #222;
+    color: #f5f5f5;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/*about band cards*/
+  .bandFlexbox
+  {
+      display: flex;
+      margin-top: 6%;
+  }
+  .bandCard {
+    margin: 100px auto 0;
+    width: 400px;
+    height: 600px;
+    perspective: 1000px;
+  }
+  
+  .card__inner1 {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .card__inner1.is-flipped {
+    transform: rotateY(180deg);
+  }
+  .card__inner2 {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .card__inner2.is-flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .card__inner3 {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .card__inner3.is-flipped {
+    transform: rotateY(180deg);
+  }
+  
+  
+  .card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card__face--front1 {
+    background-color: #FAF071;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card__face--front2 {
+    background-color: #EA6945;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card__face--front3 {
+    background-color: #3295E0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card__face--front h2 {
+    color: #FFF;
+    font-size: 32px;
+  }
+  
+  .card__face--back {
+    background-color: var(--light);
+    transform: rotateY(180deg);
+  }
+  
+  .card__content {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .card__header1,.card__header2,.card__header3 {
+    position: relative;
+    padding: 30px 30px 40px;
+  }
+  
+  .card__header1:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #FAF071;
+    z-index: -1;
+    border-radius: 0px 0px 50% 0px;
+  }
+
+  .card__header2:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #EA6945;
+    z-index: -1;
+    border-radius: 0px 0px 50% 0px;
+  }
+
+  .card__header3:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #3295E0;
+    z-index: -1;
+    border-radius: 0px 0px 50% 0px;
+  }
+
+  .pp {
+    display: block;
+    width: 128px;
+    height: 128px;
+    margin: 0 auto 30px;
+    border-radius: 50%;
+    background-color: #FFF;
+    border: 5px solid #FFF;
+    object-fit: cover;
+  }
+  
+  .card__header1 h2,  .card__header2 h2,  .card__header3 h2 {
+    color: #FFF;
+    font-size: 32px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  .card__body {
+    padding: 30px;
+  }
+  
+  .card__body h3 {
+    color: var(--dark);
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  .card__body p {
+    color: var(--dark);
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+/*for about section*/
+
+.about
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15%;
+}
+
+.left-triangle 
+{
+    width: 0; 
+    height: 0; 
+    border-top: 170px solid transparent;
+    border-bottom: 170px solid transparent;
+    border-left:170px solid #EA6945;
+}
+
+.card
+{
+    position: absolute;
+    margin-left: 20.7%;
+	background: #FAF071;
+	width: 58vw;
+	height: 28vw;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 6px solid #cecece;
+}
+
+.right-triangle 
+{
+    width: 0; 
+    height: 0; 
+    border-top: 170px solid transparent;
+    border-bottom: 170px solid transparent;
+    border-right:170px solid #3295E0; 
+}
+
+/*making yt video*/
+
+.ytvideo 
+{
+    position: relative;
+    overflow: hidden;
+    padding-top: 62.5%;
+    margin-top: 20vw;
+}
+  
+.responsive-iframe 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin-left: 19.5vw;
+    width: 60%;
+    height: 60%;
+}
+section
+{
+    position: relative;
+    background-image: url("Design/crowd.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 100%;
+}
+
+/*for footer*/
+
+.footercontainer
+{
+    max-width: 1170px;
+    margin:auto;
+}
+ul
+{
+    list-style: none;
+}
+.row
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer
+{
+    background-color: #E4E4E4;
+    padding: 30px 0;
+    line-height: 1.5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.footer-col
+{
+    width: 50%;
+    padding: 0 15px;
+}
+.footer-col h4
+{
+    font-size: 30px;
+    color: #707070;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.footer-col h4::before
+{
+    content:'';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #EA6945;
+    height: 2px;
+    box-sizing: border-box;
+    width:50px;
+}
+
+.footer-col ul li:not(:last-child)
+{
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a
+{
+    font-size: 20px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    color: #707070;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover
+{
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a
+{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: #707070;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover
+{
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+/*making mobile ver*/
+
+@media screen and (max-width:370px) /*If too small*/
+{
+    body
+    {
+        display:none;
+    }
+}
+
+@media screen and (max-width:580px)/*for mobile*/
+{
+    /*for header*/
+
+    nav .logo
+    {
+        font-size: 19px;
+        margin-left: 12px;
+    }
+
+    nav img
+    {
+        width: 25px;
+    }
+
+    /*for album*/
+
+    .album
+    {
+        margin-left: 0%;
+    }
+    .album h4
+    {
+        font-size: 29px;
+        margin-left: 17%;
+        margin-top: 3%;
+        text-shadow: 2px 2px 3px #b4b4b4;
+    }
+
+    .album #trapizium
+    {
+        width: 500px;
+        height: 40px;
+        margin: 30px;
+        box-shadow: 5px 7px 7px #a3a2a2;
+    }
+
+    /*for band members flexbox*/
+
+    .bandFlexbox
+    {
+        flex-direction: column;
+    }
+
+    /*for about section*/
+
+    .about
+    {
+        margin-top: 30%;
+    }
+    
+    .card
+    {
+        position: absolute;
+        margin-left: 16%;
+        background: #FAF071;
+        width: 68vw;
+        height: 58vw;
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }    
+
+    .left-triangle 
+    {
+        border-top: 70px solid transparent;
+        border-bottom: 70px solid transparent;
+        border-left:60px solid #EA6945;
+    }     
+
+    .right-triangle 
+    {
+        border-top: 70px solid transparent;
+        border-bottom: 70px solid transparent;
+        border-right:60px solid #3295E0; 
+    }
+
+    /*for ytvideo*/
+
+    section
+    {
+        margin-top: 40%;
+        background-position-y: 0;
+        background-color: #959595;
+        background-size: 200%;
+        padding-bottom: 15%;
+    }
+
+    .responsive-iframe 
+    {
+        width: 90%;
+        height: 90%;
+        margin-left: 5vw;
+        margin-block-end: auto;
+    }
+
+    /*for footer*/
+    .footer-col
+    {
+        width:50%;
+        margin-bottom: 30px;
+    }
+}
